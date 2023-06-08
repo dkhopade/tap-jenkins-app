@@ -22,6 +22,7 @@ pipeline {
           indexSlash = sourceUrl.indexOf("/")
           revision = sourceUrl.substring(indexSlash + 1)
         }
+        sh "rm -fr ./target"
         sh "git clone ${params.GIT-URL} target"
         dir("target") {
           sh "git checkout ${revision}"
