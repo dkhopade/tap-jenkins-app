@@ -8,8 +8,7 @@ metadata:
   name: tap-jenkins-app-workload
   namespace: mydev-ns
 spec:
-  params:
-  #! Required: selects the pipeline
+  params:  #! Required: selects the pipeline
   - name: testing_pipeline_matching_labels
     value:
       apps.tanzu.vmware.com/pipeline: jenkins-pipeline
