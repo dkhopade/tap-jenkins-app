@@ -18,12 +18,12 @@ pipeline {
     stage('Checkout code') {
       steps {
         script {
-          sourceUrl = params.SOURCE-REVISION
+          sourceUrl = params.SOURCE_REVISION
           indexSlash = sourceUrl.indexOf("/")
           revision = sourceUrl.substring(indexSlash + 1)
         }
         sh "rm -fr ./target"
-        sh "git clone ${params.GIT-URL} target"
+        sh "git clone ${params.GIT_URL} target"
         dir("target") {
           sh "git checkout ${revision}"
         }
