@@ -11,7 +11,7 @@ public class TAPJenkinsApp {
 
   @GetMapping
   public String message(){
-    return "Welcome to TAP SupplyChains with Jenkins";
+    return "Welcome to TAP SupplyChains with Jenkins.";
   }
 
   public static void main(String[] args) {
