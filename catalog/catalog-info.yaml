@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tap-jenkins-app
+  description: TAP & Jenkins Better Together
+  tags:
+    - app-accelerator
+    - java
+    - spring
+    - tanzu
+    - jenkins
+    - path2prod
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=tap-jenkins-app'
+    'backstage.io/techdocs-ref': dir:.
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
