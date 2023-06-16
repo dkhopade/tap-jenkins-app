@@ -22,12 +22,12 @@ public class TAPJenkinsAppTests {
 
   @Test
   void index() throws Exception {
-    assertEquals("Welcome to TAP SupplyChains with Jenkins.", controller.message());
+    assertEquals("Welcome to TAP SupplyChains with Jenkins...", controller.message());
 
     mockMvc
         .perform(get("/"))
         .andExpect(status().isOk())
-        .andExpect(content().string("Welcome to TAP SupplyChains with Jenkins."));
+        .andExpect(content().string("Welcome to TAP SupplyChains with Jenkins..."));
   }
 
 }
