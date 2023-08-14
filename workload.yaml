@@ -17,20 +17,8 @@ spec:
     value:
       #! Required: Name of the Jenkins job
       job-name: tap-jenkins-pipeline
-
-      #! Required: The secret created earlier to access Jenkins
       secret-name: jenkins-secret
-
-      #! Required: The `job-params` element is required, but the parameter string
-      #! might be empty. If empty, then set this value to `[]`.  If non-empty then the
-      #! value contains a JSON-encoded list of parameters to pass to the Jenkins job.
-      #! Ensure that the quotation marks inside the JSON-encoded string are escaped.
       job-params: "[{\"name\":\"GIT_URL\", \"value\":\"https://github.com/dkhopade/tap-jenkins-app/\"}, {\"name\":\"GIT_BRANCH\", \"value\":\"master\"}]"
-      #! job-params:
-      #! - name: GTI_URL
-      #!   value: https://github.com/dkhopade/tap-jenkins-app
-      #! - name: GTI_BRANCH
-      #!   value: master
   source:
     git:
       ref:
